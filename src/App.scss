@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Pelo700';
+  src: url('./assets/PelotareSans-700wt.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Pelo400';
+  src: url('./assets/PelotareSans-400wt.otf') format('opentype');
+}
+
+p {margin: 0}
+
+body {
+  background: linear-gradient(#FF009B, #EA52B4);
+  color: #fff;
+}
+
+h1 { font-size: 30px; }
+h4 { font-size: 20px; font-weight: normal; margin: 0}
+
+.App {
+  text-align: center;
+
+  img { margin-bottom: 30px;}
+}
+
+.container {
+  padding: 40px 20px;
+}

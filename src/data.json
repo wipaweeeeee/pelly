@@ -1,0 +1,17 @@
+{
+	"categories": [
+		{	
+			"name": "Fan Favorite",
+			"options": [
+				{
+					"flavor": "Birthday Cake",
+					"description": "Cake batter with vibrant rainbow sprinkles"
+				},
+				{
+					"flavor": "Chocolate Custard",
+					"description": "Chocolate Ice Cream with french custard"
+				}
+			]
+		}
+	]
+}

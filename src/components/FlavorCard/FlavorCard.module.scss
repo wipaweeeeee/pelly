@@ -1,0 +1,76 @@
+.flavorCardContainer {
+	width: 129px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 14px;
+    position: relative;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.2);
+    flex: 0 0 auto;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    display: inline-block;
+
+    &:last-child {
+    	margin-right: 20px;
+    }
+
+    img {
+    	width: 132px;
+    }
+}
+
+.flavorCardName {
+	color: #DA0F8C;
+	font-size: 14px;
+	font-family: 'Pelo400';
+    position: absolute;
+    bottom: 0;
+    background: white;
+    left: 0;
+    width: calc(100% - 24px);
+    padding: 8px 12px;
+    text-align: center;
+    white-space: normal;
+    min-height: 32px;
+}
+
+.flavorCardSelect {
+    width: 100%;
+    height: calc(100% - 44px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#FFF, #FFB1E1);
+    font-size: 30px;
+
+    span {
+    	background-color: #FDA5DB;
+    	width: 60px;
+    	height: 60px;
+    	border-radius: 100%;
+
+    	&:before {
+    		content: "+";
+    		position: absolute;
+    		top: 32px;
+    		left: 56px;
+    	}
+    }
+}
+
+.flavorCardConfirm {
+	width: 60px;
+    height: 60px;
+    position: absolute;
+    top: calc(50% - 55px);
+    left: calc(50% - 30px);
+    border-radius: 100%;
+    background-color: rgba(251, 15,159, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+	img { 
+		width: 30px;
+	}
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "FLAVOR": "Birthday Cake",
+    "DESCRIPTION": "Cake batter with vibrant rainbow sprinkles",
+    "CATEGORIES": "Fan Favorites",
+    "image": "./assets/1.jpg"
+  },
+  {
+    "FLAVOR": "Blue Moon",
+    "DESCRIPTION": "A fruit loops tasting ice cream with super-secret natural ingredients",
+    "CATEGORIES": "Scoops Exclusives",
+    "image": "./assets/2.jpg"
+  },
+  {
+    "FLAVOR": "Lavender Honey",
+    "DESCRIPTION": "Honey and lavender blossom for a sweet aromatic treat",
+    "CATEGORIES": "Scoops Exclusives",
+    "image": "./assets/3.jpg"
+  },
+  {
+    "FLAVOR": "Black Raspberry Crunch",
+    "DESCRIPTION": "A rarely made black raspberry ice cream with mouth watering chocolate covered almonds",
+    "CATEGORIES": "Classics, Fruit",
+    "image": "./assets/4.jpg"
+  },
+  {
+    "FLAVOR": "Chocolate",
+    "DESCRIPTION": "A richly made heavy chocolate",
+    "CATEGORIES": "Classics, Chocolate",
+    "image": "./assets/1.jpg"
+  },
+  {
+    "FLAVOR": "Chocolate Chip",
+    "DESCRIPTION": "A lightly flavored vanilla ice cream with chocolate chips",
+    "CATEGORIES": "Classics, Chocolate",
+    "image": "./assets/2.jpg"
+  },
+  {
+    "FLAVOR": "Chocolate Custard",
+    "DESCRIPTION": "Chocolate Ice Cream with french custard",
+    "CATEGORIES": "Fan Favorites",
+    "image": "./assets/3.jpg"
+  },
+  {
+    "FLAVOR": "French Vanilla",
+    "DESCRIPTION": "Vanilla ice cream with silky french custard",
+    "CATEGORIES": "Classics",
+    "image": "./assets/4.jpg"
+  },
+  {
+    "FLAVOR": "Kulfi",
+    "DESCRIPTION": "A Rose based ice cream with almonds, pistachios, saffron and cardamom spice.",
+    "CATEGORIES": "Scoops Exclusives",
+    "image": "./assets/1.jpg"
+  },
+  {
+    "FLAVOR": "Marshmallow Treat",
+    "DESCRIPTION": "Ooey Gooey Marshmallow Ice Cream with Rice Krispie Treats.",
+    "CATEGORIES": "Scoops Exclusives",
+    "image": "./assets/2.jpg"
+  },
+  {
+    "FLAVOR": "Mexican Chocolate",
+    "DESCRIPTION": "Chocolate based ice cream with Cinnamon",
+    "CATEGORIES": "Chocolate",
+    "image": "./assets/3.jpg"
+  },
+  {
+    "FLAVOR": "Mint Cookies",
+    "DESCRIPTION": "Intense Mint Ice Cream with America's Favorite Oreo Cookie Crumbs",
+    "CATEGORIES": "Classics",
+    "image": "./assets/4.jpg"
+  },
+  {
+    "FLAVOR": "Mocha Almond Fudge",
+    "DESCRIPTION": "Coffee ice cream with almonds and swirled fudge",
+    "CATEGORIES": "Chocolate, Nuts",
+    "image": "./assets/1.jpg"
+  },
+  {
+    "FLAVOR": "Peach",
+    "DESCRIPTION": "Peach ice cream with refreshing and delicious pieces of peach.",
+    "CATEGORIES": "Fruit",
+    "image": "./assets/2.jpg"
+  },
+  {
+    "FLAVOR": "Pistachio Almond",
+    "DESCRIPTION": "Pistachio's and Almonds mixed together",
+    "CATEGORIES": "Nuts",
+    "image": "./assets/3.jpg"
+  },
+  {
+    "FLAVOR": "Rocky Road",
+    "DESCRIPTION": "Chocolate ice cream with fluffy marshmallows and almonds",
+    "CATEGORIES": "Fan Favorites, Chocolate",
+    "image": "./assets/4.jpg"
+  },
+  {
+    "FLAVOR": "Rose",
+    "DESCRIPTION": "Rose syrup form India which gives it its taste and the ability to smell like a rose",
+    "CATEGORIES": "Scoops Exclusives",
+    "image": "./assets/1.jpg"
+  },
+  {
+    "FLAVOR": "Salty Caramel",
+    "DESCRIPTION": "Burnt Caramel ice cream with a hint of ancient sea salt",
+    "CATEGORIES": "Fan Favorites",
+    "image": "./assets/2.jpg"
+  },
+  {
+    "FLAVOR": "Sideways",
+    "DESCRIPTION": "Cabernet flavored ice cream with chocolate chips and swirls of black raspberry marble",
+    "CATEGORIES": "Scoops Exclusives, Chocolate",
+    "image": "./assets/3.jpg"
+  },
+  {
+    "FLAVOR": "Vanilla Bean",
+    "DESCRIPTION": "Our special blend of vanillas from Madagascar and Indonesia with crushed vanilla beans",
+    "CATEGORIES": "Classics",
+    "image": "./assets/4.jpg"
+  }
+]
