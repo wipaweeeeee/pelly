@@ -18,3 +18,7 @@ export const PriceList = (scoop) => {
 
   	return price;
 }
+
+export const ItemTypes = {
+  SCOOP: 'scoop',
+}

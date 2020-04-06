@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import SizeCard from './components/SizeCard/SizeCard';
 import PriceCard from './components/PriceCard/PriceCard';
 import FlavorCard from './components/FlavorCard/FlavorCard';
 import data from './csvjson.json';
 import styles from './Main.module.scss';
+import { DndProvider } from 'react-dnd'
+// import Backend from 'react-dnd-html5-backend'
+// import TouchBackend from 'react-dnd-touch-backend'
+import MultiBackend, { Preview } from 'react-dnd-multi-backend';
+import HTML5toTouch from 'react-dnd-multi-backend/dist/esm/HTML5toTouch';
 
 
 const Main = () => {
@@ -21,6 +26,10 @@ const Main = () => {
 	const handleFlavor = (name, image, index) => {
 		setFlavor(flavor => [...flavor, {name: name, image: image}]);
 		setSelected(index);
+	}
+
+	const handleDrop = (item) => {
+		setFlavor(flavor => [...flavor, {name: item.name, image: item.image}]);
 	}
 
 	const Intro = () => {
@@ -101,15 +110,26 @@ const Main = () => {
 		)
 	}
 
+	const GeneratePreview = () => {
+	  const {style, item} = useContext(Preview.Context);
+	  return <div style={{...style}}><FlavorCard content={item.name} image={item.image}/></div>;
+	};
+
 	return (
-		<div className="container">
-			{intro ? <Intro /> : <Selection />}
-			<PriceCard 
-				scoops={scoop} 
-				handleAdd={(e) => handleScoop(e, scoop + 1)}
-				flavor={flavor}
-			/>
-		</div>
+		<DndProvider backend={MultiBackend} options={HTML5toTouch}>
+			<div className="container">
+				{intro ? <Intro /> : <Selection />}
+				<PriceCard 
+					scoops={scoop} 
+					handleAdd={(e) => handleScoop(e, scoop + 1)}
+					flavor={flavor}
+					onDrop={(item) => handleDrop(item)}
+				/>
+			</div>
+			<Preview>
+		    	<GeneratePreview />
+		    </Preview>
+		</DndProvider>
 	)
 }
 

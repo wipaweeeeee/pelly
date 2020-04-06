@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from 'react'; 
 import styles from './FlavorCard.module.scss';
 import check from './../../assets/check.svg';
+import { ItemTypes } from './../helper';
+import { useDrag } from 'react-dnd';
 
 const FlavorCard = (props) => {
 
 	const [ select, setSelect ] = useState();
 	const [ confirm, setConfirm ] = useState();
+
+	const [ collectedProps, drag] = useDrag({
+		item: { type: 'scoop', name: props.content, image: props.image },
+		collect: monitor => ({
+			isDragging: monitor.isDragging()
+		})
+	})
+
+	const isDragging = collectedProps.isDragging;
 
 	useEffect(() => {
 
@@ -24,6 +35,10 @@ const FlavorCard = (props) => {
 		<div 
 			className={styles.flavorCardContainer}
 			onClick={() => setSelect(!select)}
+			ref={drag}
+			style={{
+				opacity: isDragging ? 0.5 : 1
+			}}
 		>
 			{ select && 
 				<div 

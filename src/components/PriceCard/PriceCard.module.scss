@@ -3,7 +3,7 @@
 	padding: 20px;
 	color: #FF00A1;
 	font-family: 'Pelo700';
-	position: absolute;
+	position: fixed;
     left: 0;
     bottom: 0;
     width: calc(100% - 40px);
@@ -59,6 +59,14 @@
 	vertical-align: middle;
 	font-size: 40px;
 	margin-left: auto;
+
+	&.priceCardAddSwipe {
+		width: auto;
+	    justify-content: flex-start;
+	    font-size: 20px;
+	    align-items: center;
+	    padding: 6px 12px;
+	}
 }
 
 .priceCardOpenContainer {
@@ -123,4 +131,72 @@
 .priceCardSlotScoop {
 	position: absolute;
 	display: flex;
+}
+
+.priceCardSwipe {
+	border-radius: 6px;
+    border: 1px solid #EFA2D1;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    font-family: 'Pelo400';
+    margin-bottom: 15px;
+    position: absolute;
+    background: white;
+    width: calc(100% - 54px);
+
+    &:nth-child(2) {
+		top: 109px;
+	}
+
+	&:nth-child(3) {
+		top: 198px;
+	}
+
+	&:nth-child(4) {
+		top: 287px;
+	}
+
+	&:nth-child(5) {
+		top: 376px;
+	}
+
+    img {
+    	width: 60px;
+    	border-radius: 7px;
+    }
+
+    span {
+    	margin-left: 12px;
+    	font-size: 18px;
+    	color: #FF4CD3;
+    }
+
+    .priceCardClose {
+    	margin-left: auto;
+	    border: 1px solid #FF4CD3;
+	    border-radius: 100%;
+	    width: 22px;
+	    height: 22px;
+	    display: flex;
+	    justify-content: center;
+	    line-height: 1em;
+    }
+}
+
+.priceCardSlotSwipe {
+	border-radius: 6px;
+	border: 1px dashed #F138AC;
+	height: 60px;
+	padding: 6px 20px;
+	margin-bottom: 15px;
+	color: #FFB4E3;
+	display: flex; 
+	align-items: center;
+}
+
+.priceCardDrop {
+	background-color: #EFEFEF;
+	transform: scale(1.2);
+	border-style: solid;
 }
