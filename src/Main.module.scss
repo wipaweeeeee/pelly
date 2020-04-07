@@ -19,7 +19,8 @@
     overflow-y: hidden;
     white-space: nowrap; 
 
-    ::-webkit-scrollbar {
-        display: none;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
     }
 }

@@ -66,6 +66,7 @@
 	    font-size: 20px;
 	    align-items: center;
 	    padding: 6px 12px;
+	    margin-bottom: 20px;
 	}
 }
 
@@ -146,19 +147,23 @@
     width: calc(100% - 54px);
 
     &:nth-child(2) {
-		top: 109px;
+		top: 340px;
 	}
 
 	&:nth-child(3) {
-		top: 198px;
+		top: 429px;
 	}
 
 	&:nth-child(4) {
-		top: 287px;
+		top: 518px;
 	}
 
 	&:nth-child(5) {
-		top: 376px;
+		top: 607px;
+	}
+
+	&:nth-child(6) {
+		top: 696px;
 	}
 
     img {

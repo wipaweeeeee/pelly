@@ -7,7 +7,6 @@ import { useDrop } from 'react-dnd';
 
 const PriceCard = ( props ) => {
 
-	const [ open, setOpen ] = useState();
 	const [ openCard, setOpenCard ] = useState();
 	const [ openSwipe, setOpenSwipe ] = useState();
 
@@ -65,7 +64,11 @@ const PriceCard = ( props ) => {
 
 	let swipeImage = props.flavor.map((item, index) => {
 		return (
-			<div className={styles.priceCardSwipe} key={index}>
+			<div 
+				className={styles.priceCardSwipe} 
+				key={index}
+				onClick={() => props.handleRemove(item)}
+			>
 				<img src={item.image} />
 				<span>{item.name}</span>
 				<div className={styles.priceCardClose}>x</div>
@@ -74,8 +77,6 @@ const PriceCard = ( props ) => {
 	})
 
 	useEffect(() => {
-		if( props.flavor.length > 0 ) setOpen(true);
-
 		const timer = setTimeout(() => {
 			setOpenCard(false);
 		}, 1000);
@@ -85,7 +86,7 @@ const PriceCard = ( props ) => {
 			setOpenCard(true);
 		});
 
-	}, [props.flavor])
+	}, [props.add])
 
 	return (
 		<Swipe
@@ -95,12 +96,11 @@ const PriceCard = ( props ) => {
 			<div 
 				className={classNames(
 					styles.priceCardContainer,
-					open ? styles.priceCardOpen : null)}
-				onClick={() => setOpen(!open)}
+					props.open ? styles.priceCardOpen : null)}
 				ref={drop}
 			>
 
-				{open && 
+				{props.open && 
 					<div className={styles.priceCardOpenContainer}>
 						{	props.flavor.length > 0 && openCard &&
 							<div>
@@ -133,6 +133,9 @@ const PriceCard = ( props ) => {
 
 				{ openSwipe && 
 					<div>
+						<div className={styles.priceCardImageContainer}>
+							{scoopImages}
+						</div>
 						{swipeImage}
 						{slotSwipe}
 						{props.scoops < 5 && 

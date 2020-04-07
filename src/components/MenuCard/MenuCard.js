@@ -3,9 +3,9 @@ import styles from './MenuCard.module.scss';
 
 const MenuCard = (props) => {
 	return ( 
-		<div className={styles.menuCardContainer}>
+		<a href={props.cta} className={styles.menuCardContainer}>
 			{props.content}
-		</div>
+		</a>
 	)
 }
 

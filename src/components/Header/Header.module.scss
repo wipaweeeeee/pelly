@@ -1,0 +1,11 @@
+.headerContainer {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	
+	a {
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
