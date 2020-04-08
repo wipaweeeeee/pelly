@@ -20,7 +20,7 @@ const Home = () => {
   const [ logo, setLogo ] = useState(false);
 
   for ( var i = 0; i < 5; i++) {
-    fpo.push(<MenuCard content="Signature Sundae" />)
+    fpo.push(<MenuCard key={i} content="Signature Sundae" />)
   }
 
   //Lottie

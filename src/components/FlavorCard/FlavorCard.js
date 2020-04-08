@@ -10,26 +10,31 @@ const FlavorCard = (props) => {
 	const [ confirm, setConfirm ] = useState();
 
 	const [ collectedProps, drag] = useDrag({
-		item: { type: 'scoop', name: props.content, image: props.image },
+		item: { 
+			type: 'scoop', 
+			name: props.content, 
+			image: props.image,
+			id: props.id,
+			selected: props.id
+		},
 		collect: monitor => ({
-			isDragging: monitor.isDragging()
+			isDragging: monitor.isDragging(),
 		})
 	})
 
 	const isDragging = collectedProps.isDragging;
 
 	useEffect(() => {
-
 		const timer = setTimeout(() => {
-				setConfirm(false);
+			setConfirm(true);
 		}, 1000);
 
 		return (() => {
 			clearTimeout(timer);
-			setConfirm(true);
+			setConfirm(false);
 		});
 
-	})
+	},[])
 
 	return (
 		<div 
@@ -54,7 +59,7 @@ const FlavorCard = (props) => {
 			}
 
 			{
-				props.id === props.selected && !select && !confirm &&
+				props.id === props.selected && !select && !confirm && !props.noCheck &&
 					<div className={styles.flavorCardConfirm}>
 						<img src={check} />
 					</div>

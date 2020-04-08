@@ -9,6 +9,7 @@ import { DndProvider } from 'react-dnd'
 import MultiBackend, { Preview } from 'react-dnd-multi-backend';
 import HTML5toTouch from 'react-dnd-multi-backend/dist/esm/HTML5toTouch';
 import Header from './components/Header/Header';
+import Close from './assets/close.png';
 
 
 const Main = () => {
@@ -27,11 +28,15 @@ const Main = () => {
 	const [ header, setHeader ] = useState(initialHeader);
 	const [ open, setOpen ] = useState();
 	const [ modal, setModal ] = useState();
+	const [ topping, setTopping ] = useState(false);
+	const [ current, setCurrent ] = useState("size");
+	const [ toppingModal, setToppingModal ] = useState();
 
 	const handleScoop = (e, numScoop) => {
 		e.stopPropagation();
 		setScoop(numScoop);
 		setIntro(false);
+		setTopping(false)
 		setHeader({
 			next: "toppings", 
 			ctaBack: "/main", 
@@ -39,6 +44,7 @@ const Main = () => {
 			ctaNext: "/main"
 		})
 		setOpen(true);
+		setCurrent("flavor");
 	}
 
 	const handleFlavor = (name, image, index) => {
@@ -50,6 +56,7 @@ const Main = () => {
 	const handleDrop = (item) => {
 		setFlavor(flavor => [...flavor, {name: item.name, image: item.image}]);
 		setAdd(!add);
+		setSelected(item.selected)
 	}
 
 	const handleRemove = (value) => {
@@ -57,28 +64,54 @@ const Main = () => {
 	}
 
 	const handleNext = () => {
-		setIntro(false);
-		setHeader({
-			next: "toppings", 
-			ctaBack: "/main", 
-			back: "sizes", 
-			ctaNext: "/main"
-		})
+		if (current === "flavor" && flavor.length === scoop) {
+			setTopping(true)
+			setCurrent("topping")
+			setHeader({
+				next: "lorem ipsum", 
+				ctaBack: "/main", 
+				back: "flavors", 
+				ctaNext: "/main"
+			})
+
+		} else if (current === "size") {
+			setIntro(false);
+			setOpen(true);
+			setCurrent("flavor");
+			setHeader({
+				next: "toppings", 
+				ctaBack: "/main", 
+				back: "sizes", 
+				ctaNext: "/main"
+			})
+		} else if (flavor.length !== scoop) {
+			setToppingModal(true);
+		}
 	}
 
 	const handleBack = () => {
-		setIntro(true);
-		setHeader({
-			next: "flavors", 
-			ctaBack: "/", 
-			back: "menu", 
-			ctaNext: "/main"
-		})
-	}
-
-	const handleModal = (e) => {
-		setModal(true);
-		// handleScoop(e, scoop + 1)
+		if (current === "topping") {
+			setTopping(false)
+			setIntro(false)
+			setCurrent("flavor")
+			setHeader({
+				next: "toppings", 
+				ctaBack: "/main", 
+				back: "sizes", 
+				ctaNext: "/main"
+			})
+		} else if (current === "flavor") {
+			setIntro(true);
+			setCurrent("size");
+			setOpen(false);
+			setTopping(false);
+			setHeader({
+				next: "flavors", 
+				ctaBack: "/", 
+				back: "menu", 
+				ctaNext: "/main"
+			})
+		} 
 	}
 
 	const Intro = () => {
@@ -159,15 +192,65 @@ const Main = () => {
 		)
 	}
 
+	//generate preview for dnd on mobile
 	const GeneratePreview = () => {
 	  const {style, item} = useContext(Preview.Context);
-	  return <div style={{...style}}><FlavorCard content={item.name} image={item.image}/></div>;
+	  return <div style={{...style}}><FlavorCard content={item.name} image={item.image} noCheck={true}/></div>;
 	};
+
+	const Topping = () => {
+		return (
+			<div className={styles.topping}>
+				<h1>Select your toppings</h1>
+			</div>
+		)
+	}
 
 	return (
 		<DndProvider backend={MultiBackend} options={HTML5toTouch}>
-		{modal && <ModalCard />}
-			{modal && <div className="overlay" />}
+			{modal && 
+				<React.Fragment>
+					<div 
+						className="exit"
+						onClick={() => setModal(false)}
+					>
+						<img src={Close} />
+					</div>
+					<ModalCard 
+						handleUpgrade={(e) => {
+							handleScoop(e, scoop + 1);
+							setModal(false)
+						}}
+						handleClose={() => setModal(false)}
+						scoopCount={scoop}
+						currentScoop={flavor.length}
+					/>
+					<div className="overlay" />
+				</React.Fragment>
+			}
+			{
+				toppingModal && 
+					<React.Fragment>
+						<div 
+							className="exit"
+							onClick={() => setToppingModal(false)}
+						>
+							<img src={Close} />
+						</div>
+						<ModalCard 
+							handleUpgrade={() => {
+								setCurrent("topping");
+								setTopping(true);
+								setToppingModal(false);
+							}}
+							handleClose={() => setToppingModal(false)}
+							scoopCount={scoop}
+							currentScoop={flavor.length}
+							toppingModal={toppingModal}
+						/>
+						<div className="overlay" />
+					</React.Fragment>
+			}
 			<Header 
 				ctaBack={header.ctaBack}
 				ctaNext={header.ctaNext}
@@ -177,10 +260,15 @@ const Main = () => {
 				onClickBack={() => handleBack()}
 			/>
 			<div className="container">
-				{intro ? <Intro /> : <Selection />}
+				{ intro && <Intro />}
+				{!intro && !topping && <Selection />}
+				{topping && <Topping />}
 				<PriceCard 
 					scoops={scoop} 
-					handleAdd={(e) => handleModal(e)}
+					handleAdd={(e) => {
+						setModal(true)
+						setAdd(false)
+					}}
 					flavor={flavor}
 					onDrop={(item) => handleDrop(item)}
 					handleRemove={(index) => handleRemove(index)}
