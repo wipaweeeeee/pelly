@@ -66,7 +66,7 @@ During the process of building this prototype, I discovered a number of improvem
 |-----------|--------------------|
 | Google Sheets | Airtable provides very easy to use API so designers can update content/data as they like |
 | Drawer height exceed viewheight | Disregard image |
-| Narrow bottom padding on flavor list | Increase padding for ease of swipe |
+| Narrow bottom padding on flavor list makes it difficult to swipe | Increase padding for ease of swipe |
 | Tap twice to add scoop | Tap once to add, tap again to remove |
 
 ## Wishlist
