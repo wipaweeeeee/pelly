@@ -1,68 +1,76 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Scoop
+To run:
+- clone the repo
+- `npm i` 
+- `npm run start` 
 
-## Available Scripts
+The prototype works best on mobile device, specifically iPhoneX.
 
-In the project directory, you can run:
+# Documentation
+The project is consists of many building blocks. Below is a break down of what was built.
 
-### `npm start`
+## Component List
+Main components include: 
+- Top navigation
+- Flavor Card
+- Menu Card
+- Modal Card
+- Price Card 
+- Size Card 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Interaction Pattern
+Main interactions include: 
+- Swipe (up/down/side)
+- Drag & drop
+- Pop-up Modal
+- Swipe-up Modal
+- Top Navigation
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Animation List
+Main animations include: 
+- The load animation is made with [Lottie](https://airbnb.design/lottie/)
+- Basic css animation
 
-### `npm test`
+## Data Structure
+Scoop flavors were exported from provided Google sheets as .csv,
+which then get turned into [JSON file](https://github.com/wipaweeeeee/pelly/blob/master/src/csvjson.json)
+The app then takes the JSON file as source of data. Price data was also made into helper function to prevent redundant code.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Main Logic
+Main logic include: 
+- Multiple ways to add/remove scoop
+- Allocate appropriate slots 
+- Dynamic Price
+- Programmatically add scoop to the scoop image
+- Top navigation with some condition (pop-up modal) 
 
-### `npm run build`
+## Known Bugs and Potential Solutions
+Due to limited time, bugs that don't cause flaw on the main flow are left unresolved. <br />
+Below is a small list of known bugs and potential solutions. <br />
+ 
+| Known Bug | Potential Solution |
+|-----------|--------------------|
+| Multiple scoops can be clicked at the same time | Create function that allows clicking out as deselect |
+| There is no limit to how many scoops can be added | Add limit to slot count |
+| Ability to move on with 0 scoop selected | Disable toppings navigation |
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Note: there are also known bugs in many edge cases and those are left unresolved as well but might not be documented here.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Suggestions based on Learnings 
+During the process of building this prototype, I discovered a number of improvements that can be made both to the workflow and to the design. Below are my suggestions:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Current | Potential Improvement |
+|-----------|--------------------|
+| Google Sheets | Airtable provides very easy to use API so designers can update content/data as they like |
+| Drawer height exceed viewheight | Disregard image |
+| Narrow bottom padding on flavor list | Increase padding for ease of swipe |
+| Tap twice to add scoop | Tap once to add, tap again to remove |
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Wishlist
+Below are features that I would work on/complete had time permitted: 
+- Check mark once scoop is added <br />
+Note: I didn't have enough time to add this regardless of it being in the design but also realizing that it is completely blocked on mobile view so I left it out for now
+- Page transition
+- Delightful animations include
+  - Scoops fall into bowl
+  - Card slide up/down
