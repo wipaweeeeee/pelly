@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pelly/static/css/main.f3eefa68.chunk.css",
-    "main.js": "/pelly/static/js/main.c1266898.chunk.js",
-    "main.js.map": "/pelly/static/js/main.c1266898.chunk.js.map",
+    "main.css": "/pelly/static/css/main.1877ed7f.chunk.css",
+    "main.js": "/pelly/static/js/main.20431fef.chunk.js",
+    "main.js.map": "/pelly/static/js/main.20431fef.chunk.js.map",
     "runtime-main.js": "/pelly/static/js/runtime-main.0d646a73.js",
     "runtime-main.js.map": "/pelly/static/js/runtime-main.0d646a73.js.map",
     "static/js/2.677ca21f.chunk.js": "/pelly/static/js/2.677ca21f.chunk.js",
     "static/js/2.677ca21f.chunk.js.map": "/pelly/static/js/2.677ca21f.chunk.js.map",
     "index.html": "/pelly/index.html",
-    "precache-manifest.aa763169436255f41c51d3da0bff4381.js": "/pelly/precache-manifest.aa763169436255f41c51d3da0bff4381.js",
+    "precache-manifest.8000788363c2411f474f38ab85079c31.js": "/pelly/precache-manifest.8000788363c2411f474f38ab85079c31.js",
     "service-worker.js": "/pelly/service-worker.js",
-    "static/css/main.f3eefa68.chunk.css.map": "/pelly/static/css/main.f3eefa68.chunk.css.map",
+    "static/css/main.1877ed7f.chunk.css.map": "/pelly/static/css/main.1877ed7f.chunk.css.map",
     "static/js/2.677ca21f.chunk.js.LICENSE.txt": "/pelly/static/js/2.677ca21f.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/pelly/static/media/PelotareSans-700wt.a05829cd.otf",
     "static/media/logo-top.png": "/pelly/static/media/logo-top.91492649.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.0d646a73.js",
     "static/js/2.677ca21f.chunk.js",
-    "static/css/main.f3eefa68.chunk.css",
-    "static/js/main.c1266898.chunk.js"
+    "static/css/main.1877ed7f.chunk.css",
+    "static/js/main.20431fef.chunk.js"
   ]
 }
