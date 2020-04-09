@@ -72,3 +72,29 @@ h4 { font-size: 20px; font-weight: normal; margin: 0}
       width: 30px;
     }
 }
+
+.modal {
+  display: none;
+}
+
+.showModal {
+  display: block;
+}
+
+@keyframes logoanim {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(0.7);
+    opacity: 1;
+  }
+}
+
+.logo {
+  animation-name: logoanim;
+  animation-duration: 1.2s;
+  transform: scale(0.7);
+  animation-timing-function: ease-in;
+}

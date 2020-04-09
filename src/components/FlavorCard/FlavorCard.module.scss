@@ -7,7 +7,7 @@
     box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.2);
     flex: 0 0 auto;
     margin-right: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     display: inline-block;
 
     &:last-child {
@@ -56,21 +56,4 @@
     		left: 56px;
     	}
     }
-}
-
-.flavorCardConfirm {
-	width: 60px;
-    height: 60px;
-    position: absolute;
-    top: calc(50% - 55px);
-    left: calc(50% - 30px);
-    border-radius: 100%;
-    background-color: rgba(251, 15,159, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-	img { 
-		width: 30px;
-	}
 }

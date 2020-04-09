@@ -77,9 +77,10 @@ const PriceCard = ( props ) => {
 	})
 
 	useEffect(() => {
+
 		const timer = setTimeout(() => {
 			setOpenCard(false);
-		}, 1000);
+		}, 2000);
 
 		return (() => {
 			clearTimeout(timer);

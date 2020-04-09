@@ -48,7 +48,7 @@ const Home = () => {
   useEffect(() => {
     const timerLogo = setTimeout(() => {
       setLogo(false);
-    }, 1800);
+    }, 2500);
 
     return (() => {
       clearTimeout(timerLogo);
@@ -60,7 +60,7 @@ const Home = () => {
   return (
     <div className="App container home">
       {loading && <div className="loader"><Lottie options={defaultOptions} height={100} width={100} /></div>}
-      {logo && !loading && <div className="loader"><img src={Logo_init} width="291" height="auto"/></div>}
+      {logo && !loading && <div className="loader logo"><img src={Logo_init} width="291" height="auto"/></div>}
       {!logo && !loading && 
         <React.Fragment>
         <img src={Logo} width="140"/>

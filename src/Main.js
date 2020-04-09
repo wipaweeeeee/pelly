@@ -13,6 +13,7 @@ import Close from './assets/close.png';
 
 
 const Main = () => {
+
 	let initialHeader = {
 		next: "flavors", 
 		ctaBack: "/", 
@@ -266,8 +267,9 @@ const Main = () => {
 				<PriceCard 
 					scoops={scoop} 
 					handleAdd={(e) => {
-						setModal(true)
-						setAdd(false)
+						// modalRef.current.classList += "showModal"
+						setModal(true);
+						// setAdd(false);
 					}}
 					flavor={flavor}
 					onDrop={(item) => handleDrop(item)}

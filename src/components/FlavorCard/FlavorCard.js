@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'; 
 import styles from './FlavorCard.module.scss';
-import check from './../../assets/check.svg';
 import { ItemTypes } from './../helper';
 import { useDrag } from 'react-dnd';
 
@@ -24,18 +23,6 @@ const FlavorCard = (props) => {
 
 	const isDragging = collectedProps.isDragging;
 
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setConfirm(true);
-		}, 1000);
-
-		return (() => {
-			clearTimeout(timer);
-			setConfirm(false);
-		});
-
-	},[])
-
 	return (
 		<div 
 			className={styles.flavorCardContainer}
@@ -57,13 +44,6 @@ const FlavorCard = (props) => {
 					<span/>
 				</div>
 			}
-
-			{
-				props.id === props.selected && !select && !confirm && !props.noCheck &&
-					<div className={styles.flavorCardConfirm}>
-						<img src={check} />
-					</div>
-			}
 			<img src={props.image} />
 			<div className={styles.flavorCardName}>
 				{props.content}
@@ -72,4 +52,5 @@ const FlavorCard = (props) => {
 	)
 }
 
-export default FlavorCard;
+
+export default React.memo(FlavorCard);
