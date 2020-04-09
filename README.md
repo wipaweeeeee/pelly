@@ -1,10 +1,12 @@
-# Scoop
-To run:
+# Scoops App
+View the prototype live [here](https://wipaweeeeee.github.io/pelly/)
+
+To run locally:
 - clone the repo
 - `npm i` 
 - `npm run start` 
 
-The prototype works best on mobile device, specifically iPhoneX.
+The prototype is made using the React framework. The reason I chose React is because it allows for fast development that can scale. React is one of the most popular framework for front-end development to date and with that comes a large community of users so there are a lot of libraries, resources and forums to rely on. The prototype works best on mobile device, specifically iPhoneX.
 
 # Documentation
 The project is consists of many building blocks. Below is a break down of what was built.
@@ -53,6 +55,7 @@ Below is a small list of known bugs and potential solutions. <br />
 | Multiple scoops can be clicked at the same time | Create function that allows clicking out as deselect |
 | There is no limit to how many scoops can be added | Add limit to slot count |
 | Ability to move on with 0 scoop selected | Disable toppings navigation |
+| Clicking back on Menu replays the load animation | Update app state |
 
 Note: there are also known bugs in many edge cases and those are left unresolved as well but might not be documented here.
 
@@ -72,5 +75,5 @@ Below are features that I would work on/complete had time permitted:
 Note: I didn't have enough time to add this regardless of it being in the design but also realizing that it is completely blocked on mobile view so I left it out for now
 - Page transition
 - Delightful animations include
-  - Scoops fall into bowl
+  - More elaborate scoop animation
   - Card slide up/down
