@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pelly/static/css/main.f3eefa68.chunk.css",
-    "main.js": "/pelly/static/js/main.971851e5.chunk.js",
-    "main.js.map": "/pelly/static/js/main.971851e5.chunk.js.map",
+    "main.js": "/pelly/static/js/main.59106340.chunk.js",
+    "main.js.map": "/pelly/static/js/main.59106340.chunk.js.map",
     "runtime-main.js": "/pelly/static/js/runtime-main.0d646a73.js",
     "runtime-main.js.map": "/pelly/static/js/runtime-main.0d646a73.js.map",
     "static/js/2.c34ff89f.chunk.js": "/pelly/static/js/2.c34ff89f.chunk.js",
     "static/js/2.c34ff89f.chunk.js.map": "/pelly/static/js/2.c34ff89f.chunk.js.map",
     "index.html": "/pelly/index.html",
-    "precache-manifest.8079ad8f164fb5fa61953c81edc62862.js": "/pelly/precache-manifest.8079ad8f164fb5fa61953c81edc62862.js",
+    "precache-manifest.8907cc9d69544fdacf3f6b45f54c08a1.js": "/pelly/precache-manifest.8907cc9d69544fdacf3f6b45f54c08a1.js",
     "service-worker.js": "/pelly/service-worker.js",
     "static/css/main.f3eefa68.chunk.css.map": "/pelly/static/css/main.f3eefa68.chunk.css.map",
     "static/js/2.c34ff89f.chunk.js.LICENSE.txt": "/pelly/static/js/2.c34ff89f.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.0d646a73.js",
     "static/js/2.c34ff89f.chunk.js",
     "static/css/main.f3eefa68.chunk.css",
-    "static/js/main.971851e5.chunk.js"
+    "static/js/main.59106340.chunk.js"
   ]
 }
