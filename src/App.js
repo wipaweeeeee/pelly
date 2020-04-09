@@ -8,10 +8,8 @@ import * as animationData from './assets/load.json'
 import Logo_init from './assets/logo_init.png';
 
 import {
-  BrowserRouter as Router,
-  Switch,
   Route,
-  Link
+  HashRouter
 } from "react-router-dom";
 
 const Home = () => {
@@ -64,7 +62,7 @@ const Home = () => {
       {!logo && !loading && 
         <React.Fragment>
         <img src={Logo} width="140"/>
-        <MenuCard content="Design Your Own Sundae" cta="/main"/>
+        <MenuCard content="Design Your Own Sundae" cta="#/main"/>
         {fpo}
         </React.Fragment>
     }
@@ -74,12 +72,10 @@ const Home = () => {
 
 function App() {
   return (
-      <Router>
-        <Switch>
+        <HashRouter>
           <Route exact path="/" component={Home} />
           <Route exact path="/main" component={Main} />
-        </Switch>
-      </Router>
+        </HashRouter>
   );
 }
 
