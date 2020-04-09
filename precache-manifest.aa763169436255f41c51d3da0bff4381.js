@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "19c307dfe5db9c7e95480b40b0fa6175",
+    "revision": "d3d8d815a047dab52df43351f894557a",
     "url": "/pelly/index.html"
   },
   {
-    "revision": "bcad47e0949364a9b8f4",
+    "revision": "eaaf0cc54e42223b4af2",
     "url": "/pelly/static/css/main.f3eefa68.chunk.css"
   },
   {
-    "revision": "f372d87476e7f81461e4",
-    "url": "/pelly/static/js/2.c34ff89f.chunk.js"
+    "revision": "8c6e064ab12ae983e862",
+    "url": "/pelly/static/js/2.677ca21f.chunk.js"
   },
   {
     "revision": "492d7e05a4c2e81da7932422a4d31130",
-    "url": "/pelly/static/js/2.c34ff89f.chunk.js.LICENSE.txt"
+    "url": "/pelly/static/js/2.677ca21f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bcad47e0949364a9b8f4",
-    "url": "/pelly/static/js/main.6b82ea73.chunk.js"
+    "revision": "eaaf0cc54e42223b4af2",
+    "url": "/pelly/static/js/main.c1266898.chunk.js"
   },
   {
     "revision": "788d9aaf7ef7f6ad7d8e",

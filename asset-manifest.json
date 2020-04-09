@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/pelly/static/css/main.f3eefa68.chunk.css",
-    "main.js": "/pelly/static/js/main.6b82ea73.chunk.js",
-    "main.js.map": "/pelly/static/js/main.6b82ea73.chunk.js.map",
+    "main.js": "/pelly/static/js/main.c1266898.chunk.js",
+    "main.js.map": "/pelly/static/js/main.c1266898.chunk.js.map",
     "runtime-main.js": "/pelly/static/js/runtime-main.0d646a73.js",
     "runtime-main.js.map": "/pelly/static/js/runtime-main.0d646a73.js.map",
-    "static/js/2.c34ff89f.chunk.js": "/pelly/static/js/2.c34ff89f.chunk.js",
-    "static/js/2.c34ff89f.chunk.js.map": "/pelly/static/js/2.c34ff89f.chunk.js.map",
+    "static/js/2.677ca21f.chunk.js": "/pelly/static/js/2.677ca21f.chunk.js",
+    "static/js/2.677ca21f.chunk.js.map": "/pelly/static/js/2.677ca21f.chunk.js.map",
     "index.html": "/pelly/index.html",
-    "precache-manifest.38fceb32d978bde4faf7f16fd4490010.js": "/pelly/precache-manifest.38fceb32d978bde4faf7f16fd4490010.js",
+    "precache-manifest.aa763169436255f41c51d3da0bff4381.js": "/pelly/precache-manifest.aa763169436255f41c51d3da0bff4381.js",
     "service-worker.js": "/pelly/service-worker.js",
     "static/css/main.f3eefa68.chunk.css.map": "/pelly/static/css/main.f3eefa68.chunk.css.map",
-    "static/js/2.c34ff89f.chunk.js.LICENSE.txt": "/pelly/static/js/2.c34ff89f.chunk.js.LICENSE.txt",
+    "static/js/2.677ca21f.chunk.js.LICENSE.txt": "/pelly/static/js/2.677ca21f.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/pelly/static/media/PelotareSans-700wt.a05829cd.otf",
     "static/media/logo-top.png": "/pelly/static/media/logo-top.91492649.png",
     "static/media/logo_init.png": "/pelly/static/media/logo_init.5fd3c4f0.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0d646a73.js",
-    "static/js/2.c34ff89f.chunk.js",
+    "static/js/2.677ca21f.chunk.js",
     "static/css/main.f3eefa68.chunk.css",
-    "static/js/main.6b82ea73.chunk.js"
+    "static/js/main.c1266898.chunk.js"
   ]
 }
