@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9230e1f087369cf0f26a96357a455298",
+    "revision": "ffab663ec8ff973d44697bf568b55cec",
     "url": "/pelly/index.html"
   },
   {
-    "revision": "2ed9a81c12eadc653df8",
+    "revision": "71ac597967c7f093cd0c",
     "url": "/pelly/static/css/main.f3eefa68.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pelly/static/js/2.c34ff89f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2ed9a81c12eadc653df8",
-    "url": "/pelly/static/js/main.59106340.chunk.js"
+    "revision": "71ac597967c7f093cd0c",
+    "url": "/pelly/static/js/main.4e99a232.chunk.js"
   },
   {
     "revision": "788d9aaf7ef7f6ad7d8e",
